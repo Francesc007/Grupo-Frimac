@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
+import { FeaturedServices } from "@/components/sections/FeaturedServices";
 import { Trust } from "@/components/sections/Trust";
 import { Contact } from "@/components/sections/Contact";
 
@@ -10,7 +10,7 @@ export default function Home() {
       <div className="relative">
         {/* Elemento de color decorativo entre secciones */}
         <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-secondary to-transparent opacity-5" />
-        <Services />
+        <FeaturedServices />
       </div>
 
       {/* Cartera de Clientes con Fondo de Prestigio y Elemento de Contraste */}

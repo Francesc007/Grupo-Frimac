@@ -42,29 +42,41 @@ export default function NosotrosPage() {
   return (
     <div className="pt-24 min-h-screen relative bg-slate-50/30">
       {/* Hero Nosotros */}
-      <section className="relative bg-secondary text-white py-24 px-6 md:px-12 overflow-hidden shadow-2xl">
+      <section className="relative bg-secondary text-white py-35 px-6 md:px-12 overflow-hidden shadow-2xl">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/acuerdo.jpg" 
-            alt="Ingeniería y Construcción Industrial" 
-            className="w-full h-full object-cover opacity-20"
-          />
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 15, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
+            className="relative w-full h-full"
+          >
+            <img 
+              src="/acuerdo.jpg" 
+              alt="Ingeniería y Construcción Industrial" 
+              className="w-full h-full object-cover opacity-35"
+            />
+          </motion.div>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent" />
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="max-w-2xl"
-          >
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-              Ingeniería y Construcción <span className="text-primary-dark">Industrial</span>
-            </h1>
-            <p className="text-lg text-slate-300 leading-relaxed italic border-l-4 border-primary-dark pl-6">
-              "<span className="text-primary-dark font-bold">15+ años</span> transformando el futuro industrial con excelencia técnica."
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="max-w-2xl"
+            >
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-8 leading-[1.3] md:leading-[1.4] tracking-tight">
+                Ingeniería y Construcción <br className="hidden md:block" />
+                <span className="text-primary-dark uppercase">Industrial</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed italic border-l-4 border-primary-dark pl-8 py-2">
+                "<span className="text-primary-dark font-bold">15+ años</span> transformando el futuro industrial con excelencia técnica."
+              </p>
+            </motion.div>
+            {/* Espaciador para igualar altura con Experiencia */}
+            <div className="hidden lg:block h-64" />
+          </div>
         </div>
       </section>
 
@@ -147,8 +159,7 @@ export default function NosotrosPage() {
                 </motion.div>
                 <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Nuestra Misión</h3>
                 <p className="text-slate-300 leading-relaxed font-medium text-sm">
-                  Dar solución a los requerimientos de nuestros clientes, adecuándonos a sus necesidades y presupuesto mediante conocimientos técnicos y científicos de vanguardia.
-                </p>
+                "Brindar soluciones integrales de ingeniería y construcción, transformando los requerimientos de nuestros clientes en proyectos de alta eficiencia a través de conocimientos técnicos de vanguardia y una gestión de excelencia enfocada en resultados."                </p>
               </div>
             </motion.div>
 
@@ -173,8 +184,7 @@ export default function NosotrosPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Nuestra Visión</h3>
                 <p className="text-slate-200 leading-relaxed font-medium text-sm mb-2">
-                  Ser la organización líder de bienes y servicios a nivel regional e <span className="text-primary font-bold">nacional</span>, aplicando siempre principios de innovación constante.
-                </p>
+                "Consolidarnos como el referente estratégico en servicios industriales a nivel nacional, siendo reconocidos por nuestra capacidad técnica, innovación constante y el cumplimiento riguroso de los más altos estándares de calidad y seguridad."                </p>
               </div>
             </motion.div>
           </div>

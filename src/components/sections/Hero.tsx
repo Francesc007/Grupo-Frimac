@@ -18,7 +18,7 @@ export const Hero = () => {
                  <img
                    src="/proyectos-de-construccion.jpg"
                    alt="Proyectos de Construcción Grupo Frimac"
-                   className="w-full h-full object-cover opacity-20"
+                   className="w-full h-full object-cover opacity-4luciones0"
                  />
                </motion.div>
                {/* Gradiente sutil del lado izquierdo para legibilidad (Sincronizado con Experiencia) */}

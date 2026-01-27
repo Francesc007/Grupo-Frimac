@@ -13,22 +13,29 @@ export default function ExperienciaPage() {
   ];
 
   const stats = [
-    { value: "+150", label: "Proyectos Finalizados", icon: <CheckCircle2 className="text-primary-dark" /> },
-    { value: "+50", label: "Clientes Activos", icon: <Users2 className="text-primary-dark" /> },
-    { value: "15+", label: "Años de Trayectoria", icon: <BarChart3 className="text-primary-dark" /> },
-    { value: "100%", label: "Garantía de Calidad", icon: <Award className="text-primary-dark" /> }
+    { value: "+150", label: "Proyectos Finalizados", icon: <CheckCircle2 className="text-primary-dark" size={24} /> },
+    { value: "+50", label: "Clientes Activos", icon: <Users2 className="text-primary-dark" size={24} /> },
+    { value: "15+", label: "Años de Trayectoria", icon: <BarChart3 className="text-primary-dark" size={24} /> },
+    { value: "100%", label: "Garantía de Calidad", icon: <Award className="text-primary-dark" size={24} /> }
   ];
 
   return (
-    <div className="pt-24 min-h-screen bg-slate-50/30">
+    <div className="pt-15 min-h-screen bg-slate-50/30">
       {/* Header Experiencia */}
-      <section className="relative bg-secondary text-white py-24 px-6 md:px-12 overflow-hidden">
+      <section className="relative bg-secondary text-white py-35 px-6 md:px-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=2070&auto=format&fit=crop" 
-            alt="Infraestructura Industrial" 
-            className="w-full h-full object-cover opacity-20"
-          />
+          <motion.div
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 15, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
+            className="relative w-full h-full"
+          >
+            <img 
+              src="footer.webp" 
+              alt="Infraestructura Industrial" 
+              className="w-full h-full object-cover opacity-35"
+            />
+          </motion.div>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent" />
         </div>
 
@@ -43,74 +50,30 @@ export default function ExperienciaPage() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-md lg:ml-auto">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 backdrop-blur-md p-8 rounded-[2rem] border border-white/10 text-center shadow-2xl"
+                className="bg-white/5 backdrop-blur-md p-5 md:p-6 rounded-[1.5rem] border border-white/10 text-center shadow-2xl"
               >
-                <div className="flex justify-center mb-4">{stat.icon}</div>
-                <div className="text-4xl font-bold mb-1 text-white">{stat.value}</div>
-                <div className="text-[10px] text-primary-dark font-black uppercase tracking-[0.2em]">{stat.label}</div>
+                <div className="flex justify-center mb-3">{stat.icon}</div>
+                <div className="text-2xl md:text-3xl font-bold mb-0.5 text-white">{stat.value}</div>
+                <div className="text-[9px] text-primary-dark font-black uppercase tracking-[0.2em]">{stat.label}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Sectores */}
-      <section className="section-padding bg-white relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter">Sectores de Especialidad</h2>
-            <div className="w-24 h-1 bg-primary-dark mx-auto rounded-full" />
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {sectors.map((sector, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -15 }}
-                className="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all text-center group relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-primary-dark/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative z-10">
-                  <div className="text-primary-dark mb-8 group-hover:scale-110 transition-transform duration-300">
-                    {sector.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-secondary mb-4 uppercase tracking-tight">{sector.title}</h3>
-                  <p className="text-sm text-industrial-grey leading-relaxed font-medium">{sector.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Cartera de Clientes con Fondo Obscuro y Elemento de Contraste */}
-      <div className="bg-slate-900 border-y border-white/5 py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5" />
-        
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10 mb-10">
-            <h2 className="text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Cartera de Clientes</h2>
-            <p className="text-slate-400 font-medium italic">Marcas líderes que avalan nuestra capacidad operativa y rigor técnico.</p>
-        </div>
-
-        {/* Elemento blanco detrás del carrusel para resaltar logos */}
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-xl" />
-          <div className="relative z-10 py-4">
-            <Trust />
-          </div>
-        </div>
-      </div>
-
-      {/* Galería de Proyectos */}
+      {/* Galería de Proyectos - Subida debajo del Hero */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter italic border-b-2 border-primary-dark w-fit mx-auto pb-1">Portafolio de Proyectos</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[1, 2, 3].map((i) => (
               <motion.div 
@@ -136,13 +99,60 @@ export default function ExperienciaPage() {
         </div>
       </section>
 
+      {/* Sectores */}
+      <section className="section-padding bg-slate-50 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter">Sectores de Especialidad</h2>
+            <div className="w-24 h-1 bg-primary-dark mx-auto rounded-full" />
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {sectors.map((sector, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -15 }}
+                className="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all text-center group relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-primary-dark/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10">
+                  <div className="text-primary-dark mb-8 group-hover:scale-110 transition-transform duration-300">
+                    {sector.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary mb-4 uppercase tracking-tight">{sector.title}</h3>
+                  <p className="text-sm text-industrial-grey leading-relaxed font-medium">{sector.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cartera de Clientes - Ahora hasta abajo antes del CTA */}
+      <div className="bg-slate-900 border-y border-white/5 py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5" />
+        
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10 mb-10">
+            <h2 className="text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Cartera de Clientes</h2>
+            <p className="text-slate-400 font-medium italic">Marcas líderes que avalan nuestra capacidad operativa y rigor técnico.</p>
+        </div>
+
+        {/* Elemento blanco detrás del carrusel para resaltar logos */}
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-xl" />
+          <div className="relative z-10 py-4">
+            <Trust />
+          </div>
+        </div>
+      </div>
+
       {/* CTA Final */}
       <section className="py-32 bg-secondary text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+            src="naves.webp" 
             alt="Arquitectura Industrial" 
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover opacity-20"
           />
         </div>
         <div className="glint-blue w-[600px] h-[600px] top-0 right-0 opacity-20" />

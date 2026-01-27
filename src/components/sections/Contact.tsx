@@ -50,17 +50,50 @@ export const Contact = () => {
               </motion.div>
             </div>
 
-            <motion.div whileFocus={{ scale: 1.005 }} className="relative group">
-              <label className="block text-[10px] font-black text-secondary mb-1.5 uppercase tracking-[0.2em] group-focus-within:text-primary transition-colors">
-                Empresa o Marca
-              </label>
-              <input 
-                type="text" 
-                name="company"
-                className="w-full p-3.5 rounded-xl border-2 border-slate-100 focus:border-primary outline-none bg-slate-50/50 focus:bg-white transition-all duration-300 shadow-sm focus:shadow-md" 
-                placeholder="Nombre de tu organización" 
-              />
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-5">
+              <motion.div whileFocus={{ scale: 1.01 }} className="relative group">
+                <label className="block text-[10px] font-black text-secondary mb-1.5 uppercase tracking-[0.2em] group-focus-within:text-primary transition-colors">
+                  Empresa o Marca
+                </label>
+                <input 
+                  type="text" 
+                  name="company"
+                  className="w-full p-3.5 rounded-xl border-2 border-slate-100 focus:border-primary outline-none bg-slate-50/50 focus:bg-white transition-all duration-300 shadow-sm focus:shadow-md" 
+                  placeholder="Tu organización" 
+                />
+              </motion.div>
+              <motion.div whileFocus={{ scale: 1.01 }} className="relative group">
+                <label className="block text-[10px] font-black text-secondary mb-1.5 uppercase tracking-[0.2em] group-focus-within:text-primary transition-colors">
+                  Servicio Requerido
+                </label>
+                <select 
+                  name="service"
+                  required
+                  defaultValue=""
+                  className="w-full p-3.5 rounded-xl border-2 border-slate-100 focus:border-primary outline-none bg-slate-50/50 focus:bg-white transition-all duration-300 shadow-sm focus:shadow-md appearance-none cursor-pointer"
+                >
+                  <option value="" disabled>Selecciona un servicio</option>
+                  <option value="Obra Civil">Obra Civil</option>
+                  <option value="Electromecánica">Electromecánica</option>
+                  <option value="Hidrosanitarias">Hidrosanitarias</option>
+                  <option value="Estructura Metálica">Estructura Metálica</option>
+                  <option value="Tabla Roca y Plafones">Tabla Roca y Plafones</option>
+                  <option value="Renta de Maquinaria">Renta de Maquinaria</option>
+                  <option value="Remodelación de Vivienda">Remodelación de Vivienda</option>
+                  <option value="Colocación de Concreto">Colocación de Concreto</option>
+                  <option value="Aluminio y Vidrio">Aluminio y Vidrio</option>
+                  <option value="Supervisión de Obra">Supervisión de Obra</option>
+                  <option value="Carpintería">Carpintería</option>
+                  <option value="Acabados y Pintura">Acabados y Pintura</option>
+                  <option value="Otro">Otro</option>
+                </select>
+                <div className="absolute right-4 bottom-4 pointer-events-none text-primary">
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                  </svg>
+                </div>
+              </motion.div>
+            </div>
 
             <motion.div whileFocus={{ scale: 1.005 }} className="relative group">
               <label className="block text-[10px] font-black text-secondary mb-1.5 uppercase tracking-[0.2em] group-focus-within:text-primary transition-colors">
