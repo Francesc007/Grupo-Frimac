@@ -80,5 +80,4 @@ export const Trust = () => {
       </div>
     </section>
   );
-  );
 };
