@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Services } from "@/components/sections/Services";
+import Image from "next/image";
 
 export default function ServiciosPage() {
   return (
@@ -15,10 +16,12 @@ export default function ServiciosPage() {
             transition={{ duration: 15, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
             className="relative w-full h-full"
           >
-            <img 
+            <Image 
               src="/instalaciones.webp" 
               alt="Ingeniería y Construcción" 
-              className="w-full h-full object-cover opacity-40"
+              fill
+              className="object-cover opacity-40"
+              priority
             />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent" />
@@ -30,14 +33,14 @@ export default function ServiciosPage() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-3xl"
+              className="max-w-3xl text-center lg:text-left"
             >
               <h1 className="text-4xl md:text-5xl font-black mb-6 leading-tight uppercase tracking-tighter italic">
                 Nuestras <br />
                 <span className="text-primary-dark">Capacidades</span>
               </h1>
-              <div className="w-24 h-2 bg-primary-dark mb-8 rounded-full" />
-              <p className="text-xl text-slate-300 max-w-2xl leading-relaxed font-medium">
+              <div className="w-24 h-2 bg-primary-dark mb-8 rounded-full mx-auto lg:mx-0" />
+              <p className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed font-medium mx-auto lg:mx-0">
                 Ofrecemos soluciones integrales de ingeniería y construcción diseñadas para superar los estándares más exigentes del sector industrial nacional.
               </p>
             </motion.div>
@@ -54,20 +57,20 @@ export default function ServiciosPage() {
       <Services />
 
       {/* CTA Final */}
-      <section className="py-24 bg-gradient-to-r from-secondary to-slate-900 text-white text-center relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-gradient-to-r from-secondary to-slate-900 text-white text-center relative overflow-hidden px-4">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
-        <div className="max-w-4xl mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight uppercase italic tracking-tighter">
             ¿Listo para elevar <span className="text-primary-dark">tu infraestructura?</span>
           </h2>
-          <p className="text-xl text-slate-300 mb-12 font-medium">
+          <p className="text-lg md:text-xl text-slate-300 mb-12 font-medium">
             Nuestro equipo de ingeniería está listo para analizar sus planos y requerimientos con el máximo rigor profesional.
           </p>
           <a 
             href="https://wa.me/524491115640?text=Hola,%20solicito%20una%20cotización%20técnica%20para%20un%20proyecto." 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-primary-dark text-white px-12 py-5 rounded-full font-black text-lg hover:bg-white hover:text-secondary transition-all shadow-2xl hover:shadow-primary-dark/20 uppercase tracking-widest"
+            className="inline-block bg-primary-dark text-white px-10 md:px-12 py-4 md:py-5 rounded-full font-black text-base md:text-lg hover:bg-white hover:text-secondary transition-all shadow-2xl hover:shadow-primary-dark/20 uppercase tracking-widest w-full sm:w-auto"
           >
             Iniciar Cotización Técnica
           </a>

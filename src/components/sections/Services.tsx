@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { 
   Building2, 
   Zap, 
@@ -81,7 +82,7 @@ const services = [
     title: "Carpintería",
     description: "Mobiliario a medida y acabados en madera que integran funcionalidad y elegancia en cada espacio.",
     icon: <Hammer size={32} />,
-    image: "/carpinteria.jpg" // Usamos acuerdo como placeholder para carpintería/acabados
+    image: "/carpinteria.jpg"
   },
   {
     title: "Acabados y Pintura",
@@ -97,7 +98,7 @@ export const Services = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-dark/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-4">
           <h2 className="text-4xl font-black text-secondary mb-4 uppercase tracking-tighter italic">Soluciones Integrales</h2>
           <div className="w-24 h-1 bg-primary-dark mx-auto rounded-full shadow-[0_0_10px_rgba(0,136,204,0.5)]" />
           <p className="mt-4 text-slate-600 font-medium max-w-2xl mx-auto">
@@ -105,7 +106,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-0">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -115,11 +116,12 @@ export const Services = () => {
               transition={{ delay: index * 0.05 }}
               className="group bg-white rounded-3xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden"
             >
-              <div className="relative h-56 overflow-hidden">
-                <img 
+              <div className="relative h-56 md:h-64 overflow-hidden">
+                <Image 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Degradado suave en la parte inferior solicitado */}
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60" />
@@ -150,7 +152,7 @@ export const Services = () => {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-16 text-center"
+          className="mt-16 text-center px-4"
         >
           <p className="text-industrial-grey font-bold uppercase tracking-[0.3em] text-sm italic">
             y más servicios a su disposición...

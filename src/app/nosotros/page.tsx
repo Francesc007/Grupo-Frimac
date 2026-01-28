@@ -2,8 +2,8 @@
 
 import { motion, useScroll, useSpring } from "framer-motion";
 import { ShieldCheck, Handshake, TrendingUp, Users, Trophy, Globe, Star, Target } from "lucide-react";
-import { Trust } from "@/components/sections/Trust";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function NosotrosPage() {
   const containerRef = useRef(null);
@@ -50,10 +50,12 @@ export default function NosotrosPage() {
             transition={{ duration: 15, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
             className="relative w-full h-full"
           >
-            <img 
+            <Image 
               src="/acuerdo.jpg" 
               alt="Ingeniería y Construcción Industrial" 
-              className="w-full h-full object-cover opacity-35"
+              fill
+              className="object-cover opacity-35"
+              priority
             />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent" />
@@ -64,13 +66,13 @@ export default function NosotrosPage() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              className="max-w-2xl"
+              className="max-w-2xl text-center lg:text-left"
             >
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-8 leading-[1.3] md:leading-[1.4] tracking-tight">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-8 leading-[1.3] md:leading-[1.4] tracking-tight uppercase">
                 Ingeniería y Construcción <br className="hidden md:block" />
-                <span className="text-primary-dark uppercase">Industrial</span>
+                <span className="text-primary-dark">Industrial</span>
               </h1>
-              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed italic border-l-4 border-primary-dark pl-8 py-2">
+              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed italic border-l-0 lg:border-l-4 border-primary-dark lg:pl-8 py-2 max-w-xl mx-auto lg:mx-0">
                 "<span className="text-primary-dark font-bold">15+ años</span> transformando el futuro industrial con excelencia técnica."
               </p>
             </motion.div>
@@ -96,9 +98,9 @@ export default function NosotrosPage() {
               className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-primary -translate-x-1/2 rounded-full origin-top z-10 shadow-[0_0_10px_rgba(0,174,239,0.5)]"
             />
             
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-12 md:gap-0">
               {history.map((item, index) => (
-                <div key={index} className={`relative flex items-center justify-between md:justify-normal ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} ${index !== 0 ? '-mt-6 md:-mt-8' : ''}`}>
+                <div key={index} className={`relative flex items-center justify-between md:justify-normal ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} ${index !== 0 ? 'md:-mt-8' : ''}`}>
                   <motion.div 
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -110,12 +112,12 @@ export default function NosotrosPage() {
                     initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className={`ml-12 md:ml-0 md:w-[42%] group relative`}
+                    className={`ml-12 md:ml-0 md:w-[42%] group relative w-full`}
                   >
                     <div className="absolute inset-0 bg-primary-dark/5 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    <div className="relative bg-white p-5 md:p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                      <div className="flex items-center gap-3 mb-3">
+                    <div className="relative bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <div className="flex items-center gap-3 mb-4">
                         <span className="text-primary-dark font-black text-2xl">{item.year}</span>
                         <div className="h-0.5 bg-primary-dark/20 flex-1" />
                         <Star 
@@ -123,7 +125,7 @@ export default function NosotrosPage() {
                           className="text-primary-dark transition-all duration-300 group-hover:fill-primary-dark" 
                         />
                       </div>
-                      <h3 className="text-lg font-bold text-secondary mb-2 uppercase tracking-tight">{item.title}</h3>
+                      <h3 className="text-lg font-bold text-secondary mb-3 uppercase tracking-tight">{item.title}</h3>
                       <p className="text-sm text-industrial-grey leading-relaxed font-medium">
                         {item.desc}
                       </p>
@@ -137,17 +139,17 @@ export default function NosotrosPage() {
       </section>
 
       {/* Misión y Visión */}
-      <section className="section-padding bg-slate-900 relative overflow-hidden">
+      <section className="section-padding bg-slate-900 relative overflow-hidden px-4">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
         </div>
         <div className="glint-blue w-96 h-96 -top-20 -left-20 opacity-20" />
 
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <motion.div 
               {...fadeInUp}
-              className="group bg-slate-800/40 backdrop-blur-sm p-8 rounded-[2.5rem] border border-primary/30 relative overflow-hidden hover:bg-slate-800/60 transition-all hover:border-primary duration-500"
+              className="group bg-slate-800/40 backdrop-blur-sm p-8 md:p-10 rounded-[2.5rem] border border-primary/30 relative overflow-hidden hover:bg-slate-800/60 transition-all hover:border-primary duration-500"
             >
               <div className="relative z-10">
                 <motion.div 
@@ -158,7 +160,7 @@ export default function NosotrosPage() {
                   <Target size={28} />
                 </motion.div>
                 <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Nuestra Misión</h3>
-                <p className="text-slate-300 leading-relaxed font-medium text-sm">
+                <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">
                 "Brindar soluciones integrales de ingeniería y construcción, transformando los requerimientos de nuestros clientes en proyectos de alta eficiencia a través de conocimientos técnicos de vanguardia y una gestión de excelencia enfocada en resultados."                </p>
               </div>
             </motion.div>
@@ -166,7 +168,7 @@ export default function NosotrosPage() {
             <motion.div 
               {...fadeInUp}
               transition={{ ...fadeInUp.transition, delay: 0.2 }}
-              className="group bg-slate-800/40 backdrop-blur-sm p-8 rounded-[2.5rem] border border-primary-dark/40 relative overflow-hidden hover:bg-slate-800/60 transition-all hover:border-primary-dark shadow-2xl duration-500"
+              className="group bg-slate-800/40 backdrop-blur-sm p-8 md:p-10 rounded-[2.5rem] border border-primary-dark/40 relative overflow-hidden hover:bg-slate-800/60 transition-all hover:border-primary-dark shadow-2xl duration-500"
             >
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -177,13 +179,13 @@ export default function NosotrosPage() {
                   >
                     <Trophy size={28} />
                   </motion.div>
-                  <div className="flex items-center gap-2 text-[10px] font-black text-primary bg-white/5 px-4 py-2 rounded-full border border-primary/20 uppercase tracking-widest whitespace-nowrap">
+                  <div className="flex items-center gap-2 text-[10px] font-black text-primary bg-white/5 px-4 py-2 rounded-full border border-primary/20 uppercase tracking-widest whitespace-nowrap overflow-hidden">
                     <Globe size={14} />
                     <span>Alcance 100% Nacional</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">Nuestra Visión</h3>
-                <p className="text-slate-200 leading-relaxed font-medium text-sm mb-2">
+                <p className="text-slate-200 leading-relaxed font-medium text-sm md:text-base mb-2">
                 "Consolidarnos como el referente estratégico en servicios industriales a nivel nacional, siendo reconocidos por nuestra capacidad técnica, innovación constante y el cumplimiento riguroso de los más altos estándares de calidad y seguridad."                </p>
               </div>
             </motion.div>
@@ -192,7 +194,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Principios */}
-      <section className="section-padding bg-slate-50 relative overflow-hidden">
+      <section className="section-padding bg-slate-50 relative overflow-hidden px-4">
         <div className="glint-blue w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10" />
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -200,11 +202,11 @@ export default function NosotrosPage() {
             {...fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter">Nuestros Principios</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter">Nuestros Principios</h2>
             <div className="w-24 h-1.5 bg-primary-dark mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((val, i) => (
               <motion.div
                 key={i}
@@ -219,7 +221,7 @@ export default function NosotrosPage() {
                 
                 <div className="relative z-10 text-center flex flex-col items-center">
                   <div className="text-primary-dark mb-6 group-hover:scale-110 transition-transform duration-300">{val.icon}</div>
-                  <h4 className="font-bold text-secondary mb-3 text-lg">{val.title}</h4>
+                  <h4 className="font-bold text-secondary mb-3 text-lg uppercase">{val.title}</h4>
                   <p className="text-sm text-industrial-grey leading-relaxed font-medium">{val.desc}</p>
                 </div>
               </motion.div>

@@ -10,13 +10,13 @@ export const Contact = () => {
       {/* Destello Azul */}
       <div className="glint-blue w-80 h-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-15" />
 
-      <div className="max-w-2xl mx-auto relative z-10 text-center">
-        <h2 className="text-4xl font-bold text-secondary mb-10">¿Tienes un proyecto en mente?</h2>
+      <div className="max-w-2xl mx-auto relative z-10 text-center px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-10 uppercase tracking-tighter italic">¿Tienes un proyecto en mente?</h2>
 
         <form 
           action="https://formsubmit.co/monica.lara@grupofrimac.com" 
           method="POST"
-          className="bg-white p-6 md:p-8 rounded-[2.5rem] border-2 border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative overflow-hidden text-left"
+          className="bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border-2 border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative overflow-hidden text-left"
         >
           {/* Elementos decorativos de color */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary-dark/10 rounded-full blur-3xl" />

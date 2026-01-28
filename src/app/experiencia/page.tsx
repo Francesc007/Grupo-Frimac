@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Trust } from "@/components/sections/Trust";
 import { Factory, Building2, Store, Construction, CheckCircle2, Users2, BarChart3, Award } from "lucide-react";
+import Image from "next/image";
 
 export default function ExperienciaPage() {
   const sectors = [
@@ -30,10 +31,12 @@ export default function ExperienciaPage() {
             transition={{ duration: 15, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
             className="relative w-full h-full"
           >
-            <img 
-              src="footer.webp" 
+            <Image 
+              src="/footer.webp" 
               alt="Infraestructura Industrial" 
-              className="w-full h-full object-cover opacity-35"
+              fill
+              className="object-cover opacity-35"
+              priority
             />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent" />
@@ -43,14 +46,15 @@ export default function ExperienciaPage() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
+            className="text-center lg:text-left"
           >
-            <h1 className="text-5xl font-extrabold mb-6 leading-tight">Nuestra Huella en la <span className="text-primary-dark">Industria Nacional</span></h1>
-            <p className="text-xl text-slate-300 leading-relaxed font-medium">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Nuestra Huella en la <span className="text-primary-dark">Industria Nacional</span></h1>
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
               Consolidamos nuestro prestigio a través de ejecuciones impecables. Desde Aguascalientes para todo México, transformamos retos de ingeniería en infraestructura de éxito.
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-md lg:ml-auto">
+          <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-md mx-auto lg:ml-auto w-full">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
@@ -70,26 +74,27 @@ export default function ExperienciaPage() {
 
       {/* Galería de Proyectos - Subida debajo del Hero */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 md:px-0">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter italic border-b-2 border-primary-dark w-fit mx-auto pb-1">Portafolio de Proyectos</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter italic border-b-2 border-primary-dark w-fit mx-auto pb-1">Portafolio de Proyectos</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[1, 2, 3].map((i) => (
               <motion.div 
                 key={i}
                 whileHover={{ y: -10 }}
-                className="relative h-[450px] rounded-[3rem] overflow-hidden shadow-2xl group border-4 border-slate-50"
+                className="relative h-[400px] md:h-[450px] rounded-[3rem] overflow-hidden shadow-2xl group border-4 border-slate-50"
               >
-                <img 
+                <Image 
                   src={`https://images.unsplash.com/photo-${i === 1 ? "1516937941344-00b4e0337589" : i === 2 ? "1486406146926-c627a92ad1ab" : "1503387762-592970a58f90"}?q=80&w=1000&auto=format&fit=crop`}
                   alt="Proyecto Frimac"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent p-10 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent p-8 md:p-10 flex flex-col justify-end">
                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span className="text-primary-dark font-black text-xs uppercase tracking-[0.3em] mb-3 block">Proyecto Elite</span>
-                    <h4 className="text-white font-bold text-2xl uppercase tracking-tighter mb-4">Instalación Planta Industrial {i}</h4>
+                    <h4 className="text-white font-bold text-xl md:text-2xl uppercase tracking-tighter mb-4">Instalación Planta Industrial {i}</h4>
                     <div className="w-12 h-1 bg-primary-dark rounded-full group-hover:w-full transition-all duration-700" />
                   </div>
                 </div>
@@ -101,25 +106,25 @@ export default function ExperienciaPage() {
 
       {/* Sectores */}
       <section className="section-padding bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter">Sectores de Especialidad</h2>
+        <div className="max-w-7xl mx-auto px-4 md:px-0">
+          <div className="text-center mb-16 md:mb-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter">Sectores de Especialidad</h2>
             <div className="w-24 h-1 bg-primary-dark mx-auto rounded-full" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {sectors.map((sector, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -15 }}
-                className="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all text-center group relative overflow-hidden"
+                className="bg-white p-10 md:p-12 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all text-center group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-primary-dark/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
-                  <div className="text-primary-dark mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-primary-dark mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-300">
                     {sector.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-secondary mb-4 uppercase tracking-tight">{sector.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-secondary mb-4 uppercase tracking-tight">{sector.title}</h3>
                   <p className="text-sm text-industrial-grey leading-relaxed font-medium">{sector.desc}</p>
                 </div>
               </motion.div>
@@ -133,8 +138,8 @@ export default function ExperienciaPage() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5" />
         
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10 mb-10">
-            <h2 className="text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Cartera de Clientes</h2>
-            <p className="text-slate-400 font-medium italic">Marcas líderes que avalan nuestra capacidad operativa y rigor técnico.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Cartera de Clientes</h2>
+            <p className="text-slate-400 font-medium italic text-sm md:text-base">Marcas líderes que avalan nuestra capacidad operativa y rigor técnico.</p>
         </div>
 
         {/* Elemento blanco detrás del carrusel para resaltar logos */}
@@ -147,23 +152,24 @@ export default function ExperienciaPage() {
       </div>
 
       {/* CTA Final */}
-      <section className="py-32 bg-secondary text-white text-center relative overflow-hidden">
+      <section className="py-24 md:py-32 bg-secondary text-white text-center relative overflow-hidden px-4">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="naves.webp" 
+          <Image 
+            src="/naves.webp" 
             alt="Arquitectura Industrial" 
-            className="w-full h-full object-cover opacity-20"
+            fill
+            className="object-cover opacity-20"
           />
         </div>
-        <div className="glint-blue w-[600px] h-[600px] top-0 right-0 opacity-20" />
-        <div className="max-w-3xl mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 uppercase tracking-tighter leading-tight">¿Listo para elevar el estándar de su infraestructura?</h2>
-          <p className="text-xl text-slate-400 mb-12 font-medium">Permítanos ser su aliado estratégico en su próximo proyecto de gran escala bajo estándares internacionales.</p>
+        <div className="glint-blue w-[300px] md:w-[600px] h-[300px] md:h-[600px] top-0 right-0 opacity-20" />
+        <div className="max-w-3xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-tighter leading-tight">¿Listo para elevar el estándar de su infraestructura?</h2>
+          <p className="text-lg md:text-xl text-slate-400 mb-12 font-medium">Permítanos ser su aliado estratégico en su próximo proyecto de gran escala bajo estándares internacionales.</p>
           <a 
             href="https://wa.me/524491115640?text=Hola%20Grupo%20Frimac%2C%20me%20interesa%20agendar%20una%20reuni%C3%B3n%20t%C3%A9cnica%20para%20un%20proyecto." 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-primary-dark text-white px-14 py-5 rounded-full font-black text-lg hover:bg-secondary transition-all shadow-2xl hover:shadow-primary-dark/40 uppercase tracking-[0.2em] text-sm"
+            className="inline-block bg-primary-dark text-white px-10 md:px-14 py-4 md:py-5 rounded-full font-black text-base md:text-lg hover:bg-secondary transition-all shadow-2xl hover:shadow-primary-dark/40 uppercase tracking-[0.2em] text-sm w-full sm:w-auto"
           >
             Agendar Reunión Técnica
           </a>

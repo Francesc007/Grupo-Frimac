@@ -31,24 +31,24 @@ export const Trust = () => {
   ]);
 
   return (
-    <section id="experiencia" className="py-8 bg-transparent transition-all duration-500">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+    <section id="clientes-carrusel" className="py-8 bg-transparent transition-all duration-500 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           {/* Texto de confianza */}
-          <div className="shrink-0 text-center md:text-left">
+          <div className="shrink-0 text-center lg:text-left">
             <h2 className="text-xl font-bold text-secondary mb-1">Empresas que Confían</h2>
             <p className="text-primary-dark font-black text-sm uppercase tracking-[0.2em] opacity-90">+15 años de trayectoria</p>
           </div>
 
           {/* Carrusel de logos reales */}
-          <div className="overflow-hidden flex-1" ref={emblaRef}>
+          <div className="overflow-hidden flex-1 w-full" ref={emblaRef}>
             <div className="flex items-center">
               {clientLogos.map((logo, index) => (
                 <div 
                   key={index} 
-                  className="flex-[0_0_40%] sm:flex-[0_0_25%] md:flex-[0_0_20%] lg:flex-[0_0_15%] min-w-0 px-6"
+                  className="flex-[0_0_50%] sm:flex-[0_0_33.33%] md:flex-[0_0_25%] lg:flex-[0_0_20%] min-w-0 px-4 md:px-6"
                 >
-                  <div className="relative h-16 w-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                  <div className="relative h-12 md:h-16 w-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <Image
                       src={logo.src}
                       alt={`Logo de ${logo.name}`}
@@ -62,9 +62,9 @@ export const Trust = () => {
               {clientLogos.map((logo, index) => (
                 <div 
                   key={`dup-${index}`} 
-                  className="flex-[0_0_40%] sm:flex-[0_0_25%] md:flex-[0_0_20%] lg:flex-[0_0_15%] min-w-0 px-6"
+                  className="flex-[0_0_50%] sm:flex-[0_0_33.33%] md:flex-[0_0_25%] lg:flex-[0_0_20%] min-w-0 px-4 md:px-6"
                 >
-                  <div className="relative h-16 w-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                  <div className="relative h-12 md:h-16 w-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                     <Image
                       src={logo.src}
                       alt={`Logo de ${logo.name}`}
@@ -79,5 +79,6 @@ export const Trust = () => {
         </div>
       </div>
     </section>
+  );
   );
 };

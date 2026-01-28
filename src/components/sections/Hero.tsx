@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -15,11 +16,13 @@ export const Hero = () => {
                  transition={{ duration: 15, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
                  className="relative w-full h-full"
                >
-                         <img
-                           src="/equipo 1.png"
-                           alt="Equipo de Trabajo Grupo Frimac"
-                           className="w-full h-full object-cover opacity-35"
-                         />
+                 <Image
+                   src="/equipo 1.png"
+                   alt="Equipo de Trabajo Grupo Frimac"
+                   fill
+                   className="object-cover opacity-35"
+                   priority
+                 />
                </motion.div>
                {/* Gradiente sutil del lado izquierdo para legibilidad (Sincronizado con Experiencia) */}
                <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent z-10" />
@@ -34,39 +37,39 @@ export const Hero = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="order-1 text-left flex flex-col items-start"
+          className="order-1 text-center md:text-left flex flex-col items-center md:items-start"
         >
           <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-8 tracking-tighter">
             Soluciones Integrales de <span className="text-primary-dark italic">Alto Nivel</span>
           </h1>
-          <p className="text-xl text-slate-300 mb-10 font-medium max-w-lg leading-relaxed border-l-2 border-primary-dark pl-6">
+          <p className="text-xl text-slate-300 mb-10 font-medium max-w-lg leading-relaxed border-l-0 md:border-l-2 border-primary-dark md:pl-6">
             Líderes en ingeniería y construcción estratégica desde <span className="text-white font-bold">Aguascalientes</span>, materializando proyectos de infraestructura técnica con estándares de excelencia nacional.
           </p>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 w-full md:w-auto">
             {[
               "15+ Años de Experiencia",
               "Normas de Seguridad",
               "Presupuestos Ágiles",
               "Garantía de Calidad"
             ].map((item) => (
-              <li key={item} className="flex items-center gap-3 text-slate-200 font-bold">
+              <li key={item} className="flex items-center justify-center md:justify-start gap-3 text-slate-200 font-bold">
                 <CheckCircle className="text-primary-dark" size={20} />
                 {item}
               </li>
             ))}
           </ul>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link 
               href="/servicios" 
-              className="px-8 py-4 rounded-full bg-primary-dark text-white font-black hover:bg-secondary transition-all duration-300 shadow-2xl shadow-primary-dark/40 text-center uppercase tracking-widest text-sm border-2 border-primary-dark"
+              className="px-8 py-4 rounded-full bg-primary-dark text-white font-black hover:bg-secondary transition-all duration-300 shadow-2xl shadow-primary-dark/40 text-center uppercase tracking-widest text-sm border-2 border-primary-dark w-full sm:w-auto"
             >
               Nuestros Servicios
             </Link>
             <Link 
               href="/experiencia" 
-              className="px-8 py-4 rounded-full bg-white/10 border-2 border-primary text-white font-black hover:bg-primary transition-all duration-300 shadow-2xl shadow-primary/20 text-center uppercase tracking-widest text-sm backdrop-blur-md"
+              className="px-8 py-4 rounded-full bg-white/10 border-2 border-primary text-white font-black hover:bg-primary transition-all duration-300 shadow-2xl shadow-primary/20 text-center uppercase tracking-widest text-sm backdrop-blur-md w-full sm:w-auto"
             >
               Ver Proyectos
             </Link>
@@ -93,11 +96,15 @@ export const Hero = () => {
             className="relative z-10 w-[75%]"
           >
             <div className="absolute -inset-4 bg-primary/30 rounded-[3rem] blur-3xl" />
-            <img 
-              src="/tunel 1.jpg" 
-              alt="Proyecto Túnel Grupo Frimac" 
-              className="relative rounded-[2.5rem] shadow-2xl object-cover h-[400px] w-full border-b-[12px] border-primary-dark"
-            />
+            <div className="relative rounded-[2.5rem] shadow-2xl overflow-hidden h-[400px] w-full border-b-[12px] border-primary-dark">
+              <Image 
+                src="/tunel 1.jpg" 
+                alt="Proyecto Túnel Grupo Frimac" 
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </motion.div>
 
           {/* Engrane decorativo reposicionado a la derecha */}

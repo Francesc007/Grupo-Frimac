@@ -34,7 +34,7 @@ export const Navbar = () => {
             alt="Grupo Frimac Logo" 
             width={220} 
             height={75} 
-            className="h-14 md:h-16 w-auto"
+            className="h-10 md:h-16 w-auto"
             priority
           />
         </Link>

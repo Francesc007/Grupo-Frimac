@@ -49,7 +49,7 @@ export const WhatsAppButton = ({ className, text }: WhatsAppButtonProps) => {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end">
       <AnimatePresence>
         {isHovered && (
           <motion.div
@@ -91,9 +91,9 @@ export const WhatsAppButton = ({ className, text }: WhatsAppButtonProps) => {
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
           whileHover={{ scale: 1.15 }}
-          className="relative bg-primary text-white p-4 rounded-full shadow-2xl flex items-center justify-center z-10 border-2 border-white/10"
+          className="relative bg-primary text-white p-3 md:p-4 rounded-full shadow-2xl flex items-center justify-center z-10 border-2 border-white/10"
         >
-          <WhatsAppIcon className="w-8 h-8" />
+          <WhatsAppIcon className="w-6 h-6 md:w-8 md:h-8" />
         </motion.a>
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Building2, Truck, Settings, Shield } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const mainServices = [
   {
@@ -30,9 +31,9 @@ const mainServices = [
 
 export const FeaturedServices = () => {
   return (
-    <section id="servicios-principales" className="py-24 px-6 md:px-12 bg-white relative overflow-hidden">
+    <section id="servicios-principales" className="py-24 px-6 md:px-12 bg-white relative overflow-hidden text-center md:text-left">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 text-center md:text-left">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-black text-secondary mb-4 uppercase tracking-tighter italic">
               Nuestros <span className="text-primary-dark">Servicios</span>
@@ -44,13 +45,13 @@ export const FeaturedServices = () => {
           </div>
           <Link 
             href="/servicios"
-            className="px-8 py-4 bg-secondary text-white rounded-full font-bold hover:bg-primary-dark transition-all shadow-xl hover:shadow-primary-dark/20 uppercase tracking-widest text-xs"
+            className="px-8 py-4 bg-secondary text-white rounded-full font-bold hover:bg-primary-dark transition-all shadow-xl hover:shadow-primary-dark/20 uppercase tracking-widest text-xs w-full md:w-auto"
           >
             Ver Catálogo Completo
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {mainServices.map((service, index) => (
             <motion.div
               key={service.title}
@@ -58,16 +59,17 @@ export const FeaturedServices = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-primary-dark/30 transition-all duration-500"
+              className="group relative h-[450px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-primary-dark/30 transition-all duration-500"
             >
-              <img 
+              <Image 
                 src={service.image} 
                 alt={service.title} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/60 to-transparent" />
               
-              <div className="absolute inset-0 p-10 flex flex-col justify-end">
+              <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <div className="mb-6 p-4 bg-primary-dark/90 backdrop-blur-md rounded-2xl w-fit text-white group-hover:scale-110 transition-transform duration-500">
                   {service.icon}
                 </div>
