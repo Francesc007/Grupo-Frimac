@@ -153,7 +153,7 @@ export const Services = () => {
           className="mt-16 text-center"
         >
           <p className="text-industrial-grey font-bold uppercase tracking-[0.3em] text-sm italic">
-            Muchos más servicios integrales a su disposición...
+            y más servicios a su disposición...
           </p>
           <div className="w-12 h-1 bg-slate-200 mx-auto mt-4 rounded-full" />
         </motion.div>

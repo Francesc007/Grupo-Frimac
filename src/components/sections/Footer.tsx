@@ -110,9 +110,13 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-[9px] font-bold tracking-[0.3em] uppercase py-4">
-        <p>© {currentYear} GRUPO FRIMAC. TODOS LOS DERECHOS RESERVADOS.</p>
-        <p className="mt-2 md:mt-0 text-slate-600">Jesús María, Aguascalientes, México</p>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-8 gap-4">
+        <p className="text-slate-400 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase">
+          © 2026 GRUPO FRIMAC. TODOS LOS DERECHOS RESERVADOS.
+        </p>
+        <p className="text-slate-500 text-[9px] md:text-[10px] font-medium tracking-wider">
+          Powered by <a href="https://sigmaaiagency.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-dark font-bold transition-colors">Sigma AI Agency</a> | Automatización Inteligente
+        </p>
       </div>
 
       {/* Modal de Privacidad */}

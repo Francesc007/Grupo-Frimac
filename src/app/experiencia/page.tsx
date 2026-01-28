@@ -21,7 +21,7 @@ export default function ExperienciaPage() {
 
   return (
     <div className="pt-15 min-h-screen bg-slate-50/30">
-      {/* Header Experiencia */}
+      {/* Header Proyectos */}
       <section className="relative bg-secondary text-white py-35 px-6 md:px-12 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <motion.div
@@ -159,7 +159,12 @@ export default function ExperienciaPage() {
         <div className="max-w-3xl mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 uppercase tracking-tighter leading-tight">¿Listo para elevar el estándar de su infraestructura?</h2>
           <p className="text-xl text-slate-400 mb-12 font-medium">Permítanos ser su aliado estratégico en su próximo proyecto de gran escala bajo estándares internacionales.</p>
-          <a href="/#contacto" className="bg-primary-dark text-white px-14 py-5 rounded-full font-black text-lg hover:bg-secondary transition-all shadow-2xl hover:shadow-primary-dark/40 uppercase tracking-[0.2em] text-sm">
+          <a 
+            href="https://wa.me/524491115640?text=Hola%20Grupo%20Frimac%2C%20me%20interesa%20agendar%20una%20reuni%C3%B3n%20t%C3%A9cnica%20para%20un%20proyecto." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-primary-dark text-white px-14 py-5 rounded-full font-black text-lg hover:bg-secondary transition-all shadow-2xl hover:shadow-primary-dark/40 uppercase tracking-[0.2em] text-sm"
+          >
             Agendar Reunión Técnica
           </a>
         </div>

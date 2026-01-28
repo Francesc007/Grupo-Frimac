@@ -16,12 +16,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Grupo Frimac | Soluciones Industriales en Aguascalientes",
+  title: "Grupo Frimac | Soluciones Integrales de Alto Nivel",
   description: "Líderes en obra civil, aire acondicionado industrial e instalaciones especiales en Aguascalientes. Más de 15 años de experiencia transformando la industria.",
   keywords: ["soluciones industriales aguascalientes", "obra civil", "aire acondicionado industrial", "ingeniería industrial", "grupo frimac", "instalaciones especiales"],
   authors: [{ name: "Grupo Frimac" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
+  icons: {
+    icon: "/logo.webp",
+    shortcut: "/logo.webp",
+    apple: "/logo.webp",
+  },
   openGraph: {
     type: "website",
     locale: "es_MX",

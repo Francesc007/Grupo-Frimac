@@ -20,7 +20,7 @@ export const Navbar = () => {
   const navLinks = [
     { name: "Nosotros", href: "/nosotros" },
     { name: "Servicios", href: "/servicios" },
-    { name: "Experiencia", href: "/experiencia" },
+    { name: "Proyectos", href: "/experiencia" },
   ];
 
   const isActive = (path: string) => pathname === path;

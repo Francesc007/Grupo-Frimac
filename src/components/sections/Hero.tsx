@@ -15,11 +15,11 @@ export const Hero = () => {
                  transition={{ duration: 15, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
                  className="relative w-full h-full"
                >
-                 <img
-                   src="/proyectos-de-construccion.jpg"
-                   alt="Proyectos de Construcción Grupo Frimac"
-                   className="w-full h-full object-cover opacity-4luciones0"
-                 />
+                         <img
+                           src="/equipo 1.png"
+                           alt="Equipo de Trabajo Grupo Frimac"
+                           className="w-full h-full object-cover opacity-35"
+                         />
                </motion.div>
                {/* Gradiente sutil del lado izquierdo para legibilidad (Sincronizado con Experiencia) */}
                <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent z-10" />
