@@ -20,6 +20,21 @@ export default function ExperienciaPage() {
     { value: "100%", label: "Garantía de Calidad", icon: <Award className="text-primary-dark" size={24} /> }
   ];
 
+  const projects = [
+    { id: 1, image: "/Imagen19.png", title: "Acabados en Pasillos, Flex" },
+    { id: 2, image: "/Imagen46.png", title: "Oxxo Aguascalientes, Oxxo" },
+    { id: 3, image: "/Imagen41.png", title: "Sistema de riego, Empresa" },
+    { id: 4, image: "/Imagen18.png", title: "Cuarto limpio" },
+    { id: 5, image: "/Imagen22.png", title: "Concreto Hidraúlico, Empresa" },
+    { id: 6, image: "/Imagen14.png", title: "Grúas Viajeras, Empresa" },
+    { id: 7, image: "/Imagen34.png", title: "Remodelación de Oficinas, Empresa" },
+    { id: 8, image: "/Imagen44.png", title: "Instalaciones Sanitarias, Flex" },
+    { id: 9, image: "/Imagen49.png", title: "Cuarto Limpio, Empresa" },
+    { id: 10, image: "/Imagen15.png", title: "Remodelación de Comedor, Flex" },
+    { id: 11, image: "/Imagen39.png", title: "Oficinas de Tablaroca, Empresa" },
+    { id: 12, image: "/Imagen17.png", title: "Colado de losa, Empresa" },
+  ];
+
   return (
     <div className="pt-15 min-h-screen bg-slate-50/30">
       {/* Header Proyectos */}
@@ -79,22 +94,26 @@ export default function ExperienciaPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 uppercase tracking-tighter italic border-b-2 border-primary-dark w-fit mx-auto pb-1">Portafolio de Proyectos</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[1, 2, 3].map((i) => (
+            {projects.map((project, i) => (
               <motion.div 
-                key={i}
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (i % 3) * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="relative h-[400px] md:h-[450px] rounded-[3rem] overflow-hidden shadow-2xl group border-4 border-slate-50"
+                className="relative h-[320px] md:h-[380px] rounded-[2.5rem] overflow-hidden shadow-2xl group border-4 border-slate-50"
               >
                 <Image 
-                  src={`https://images.unsplash.com/photo-${i === 1 ? "1516937941344-00b4e0337589" : i === 2 ? "1486406146926-c627a92ad1ab" : "1503387762-592970a58f90"}?q=80&w=1000&auto=format&fit=crop`}
-                  alt="Proyecto Frimac"
+                  src={project.image}
+                  alt={project.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent p-8 md:p-10 flex flex-col justify-end">
                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span className="text-primary-dark font-black text-xs uppercase tracking-[0.3em] mb-3 block">Proyecto Elite</span>
-                    <h4 className="text-white font-bold text-xl md:text-2xl uppercase tracking-tighter mb-4">Instalación Planta Industrial {i}</h4>
+                    <h4 className="text-white font-bold text-xl md:text-2xl uppercase tracking-tighter mb-4">{project.title}</h4>
                     <div className="w-12 h-1 bg-primary-dark rounded-full group-hover:w-full transition-all duration-700" />
                   </div>
                 </div>

@@ -22,13 +22,13 @@ const services = [
     title: "Obra Civil",
     description: "Construcción robusta de naves industriales, cimentaciones y estructuras bajo los más altos estándares de calidad.",
     icon: <Building2 size={32} />,
-    image: "/construcción.jpeg"
+    image: "/Imagen4.png"
   },
   {
     title: "Electromecánica",
     description: "Instalaciones eléctricas de potencia, subestaciones y montaje de equipos industriales con precisión técnica.",
     icon: <Zap size={32} />,
-    image: "/Electromecanica.png"
+    image: "/eléctrico.jpg"
   },
   {
     title: "Hidrosanitarias",
@@ -40,37 +40,37 @@ const services = [
     title: "Estructura Metálica",
     description: "Diseño, fabricación y montaje de estructuras de acero para grandes claros y requerimientos industriales.",
     icon: <Warehouse size={32} />,
-    image: "/Soldadura 1.jpg"
+    image: "/Imagen29.png"
   },
   {
     title: "Tabla Roca y Plafones",
     description: "Sistemas ligeros de alta calidad para optimización de oficinas y espacios industriales con acabados perfectos.",
     icon: <Layers size={32} />,
-    image: "/tablaroca.jpg"
+    image: "/Imagen18.png"
   },
   {
     title: "Renta de Maquinaria y equipo",
     description: "Suministro de maquinaria pesada, grúas y montacargas para soporte logístico total en cualquier escala de obra.",
     icon: <Truck size={32} />,
-    image: "/maquinaría.jpeg"
+    image: "/equipo 1.png"
   },
   {
-    title: "Remodelación de Vivienda",
+    title: "Remodelación",
     description: "Transformamos espacios residenciales con acabados de lujo, optimización funcional y diseño arquitectónico.",
     icon: <Paintbrush size={32} />,
-    image: "/remodelación.jpg"
+    image: "/Imagen47.png"
   },
   {
     title: "Colocación de Concreto",
     description: "Firmes, pavimentos y estructuras de concreto hidráulico con acabados industriales de alta resistencia.",
     icon: <Construction size={32} />,
-    image: "/concreto.jpg"
+    image: "/Imagen7.png"
   },
   {
     title: "Aluminio y Vidrio",
     description: "Cancelería industrial y comercial con diseño moderno, resistencia estructural y aislamiento térmico.",
     icon: <Settings size={32} />,
-    image: "/aluminio.jpg"
+    image: "/Imagen33.png"
   },
   {
     title: "Supervisión de Obra",
@@ -82,13 +82,13 @@ const services = [
     title: "Carpintería",
     description: "Mobiliario a medida y acabados en madera que integran funcionalidad y elegancia en cada espacio.",
     icon: <Hammer size={32} />,
-    image: "/carpinteria.jpg"
+    image: "/carpinteria1.jpg"
   },
   {
     title: "Acabados y Pintura",
     description: "Detalles finales, recubrimientos y pintura industrial que garantizan una estética profesional duradera.",
     icon: <Paintbrush size={32} />,
-    image: "/acabados.png"
+    image: "/Imagen12.png"
   }
 ];
 
@@ -116,7 +116,7 @@ export const Services = () => {
               transition={{ delay: index * 0.05 }}
               className="group bg-white rounded-3xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden"
             >
-              <div className="relative h-56 md:h-64 overflow-hidden">
+              <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src={service.image} 
                   alt={service.title} 

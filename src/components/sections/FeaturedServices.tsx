@@ -17,14 +17,14 @@ const mainServices = [
     title: "Renta de Maquinaria",
     description: "Equipo pesado, grúas y montacargas disponibles para proyectos de cualquier escala.",
     icon: <Truck size={40} />,
-    image: "/maquinaría.jpeg",
+    image: "/Imagen3.1.png",
     link: "/servicios#maquinaria"
   },
   {
     title: "Instalaciones Especiales",
     description: "Sistemas contra incendio, redes hidráulicas y neumáticas bajo normas internacionales.",
     icon: <Settings size={40} />,
-    image: "/instalaciones.webp",
+    image: "/Imagen13.png",
     link: "/servicios#instalaciones"
   }
 ];
@@ -59,7 +59,7 @@ export const FeaturedServices = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative h-[450px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-primary-dark/30 transition-all duration-500"
+              className="group relative h-[400px] md:h-[450px] rounded-[2rem] overflow-hidden shadow-2xl hover:shadow-primary-dark/30 transition-all duration-500"
             >
               <Image 
                 src={service.image} 

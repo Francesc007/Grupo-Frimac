@@ -63,34 +63,34 @@ export const Footer = () => {
             Líderes en soluciones industriales y de construcción en el centro del país. Calidad, seguridad y compromiso en cada obra que realizamos.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
+            <a href="#" aria-label="Facebook" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
               <Facebook size={18} />
             </a>
-            <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
+            <a href="#" aria-label="Instagram" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
               <Instagram size={18} />
             </a>
-            <a href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
+            <a href="#" aria-label="LinkedIn" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
               <Linkedin size={18} />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-start">
           <h4 className="text-lg font-bold mb-6 text-primary-dark uppercase tracking-wider">Contacto</h4>
           <ul className="space-y-3 text-slate-300 font-medium w-fit">
-            <li className="flex gap-3 items-center md:items-start">
+            <li className="flex gap-3 items-start">
               <MapPin className="text-primary-dark shrink-0" size={18} />
-              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-xs leading-relaxed text-center md:text-left">
+              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-xs leading-relaxed text-left">
                 Moscatel 305, Granjas Miravalle, 20905 Jesús María, Ags.
               </a>
             </li>
-            <li className="flex gap-3 items-center md:items-start">
+            <li className="flex gap-3 items-center">
               <Phone className="text-primary-dark shrink-0" size={18} />
               <span className="text-xs">+52 449 156 0150 / 449 111 5640</span>
             </li>
-            <li className="flex gap-3 items-center md:items-start">
+            <li className="flex gap-3 items-start">
               <Mail className="text-primary-dark shrink-0" size={18} />
-              <div className="flex flex-col gap-1 text-xs text-center md:text-left">
+              <div className="flex flex-col gap-1 text-xs text-left">
                 <a href="mailto:miguel.frias1@grupofrimac.com" className="hover:text-primary transition-colors">miguel.frias1@grupofrimac.com</a>
                 <a href="mailto:monica.lara@grupofrimac.com" className="hover:text-primary transition-colors">monica.lara@grupofrimac.com</a>
               </div>
@@ -98,7 +98,7 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-start">
           <h4 className="text-lg font-bold mb-6 text-primary-dark uppercase tracking-wider">Legal</h4>
           <button 
             onClick={() => setShowPrivacy(true)}
@@ -112,7 +112,7 @@ export const Footer = () => {
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-8 gap-4">
         <p className="text-slate-400 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase">
-          © 2026 GRUPO FRIMAC. TODOS LOS DERECHOS RESERVADOS.
+          © {currentYear} GRUPO FRIMAC. TODOS LOS DERECHOS RESERVADOS.
         </p>
         <p className="text-slate-500 text-[9px] md:text-[10px] font-medium tracking-wider">
           Powered by <a href="https://sigmaaiagency.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary-dark font-bold transition-colors">Sigma AI Agency</a> | Automatización Inteligente
@@ -142,6 +142,7 @@ export const Footer = () => {
                 </div>
                 <button 
                   onClick={() => setShowPrivacy(false)}
+                  aria-label="Cerrar"
                   className="p-2 hover:bg-slate-200 rounded-full transition-colors text-secondary"
                 >
                   <X size={24} />

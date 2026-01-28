@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-           <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-secondary">
+    <section className="relative min-h-screen flex items-center pt-28 pb-20 md:pt-20 md:pb-0 overflow-hidden bg-secondary">
              {/* Background Imagen: Proyecto de Construcción con opacidad sincronizada */}
              <div className="absolute inset-0 z-0">
                <motion.div
@@ -17,7 +17,7 @@ export const Hero = () => {
                  className="relative w-full h-full"
                >
                  <Image
-                   src="/equipo 1.png"
+                   src="/Imagen49.png"
                    alt="Equipo de Trabajo Grupo Frimac"
                    fill
                    className="object-cover opacity-35"
@@ -98,7 +98,7 @@ export const Hero = () => {
             <div className="absolute -inset-4 bg-primary/30 rounded-[3rem] blur-3xl" />
             <div className="relative rounded-[2.5rem] shadow-2xl overflow-hidden h-[400px] w-full border-b-[12px] border-primary-dark">
               <Image 
-                src="/tunel 1.jpg" 
+                src="/Imagen2.png" 
                 alt="Proyecto Túnel Grupo Frimac" 
                 fill
                 className="object-cover"

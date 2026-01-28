@@ -51,10 +51,10 @@ export default function NosotrosPage() {
             className="relative w-full h-full"
           >
             <Image 
-              src="/acuerdo.jpg" 
+              src="/Imagen1.png" 
               alt="Ingeniería y Construcción Industrial" 
               fill
-              className="object-cover opacity-35"
+              className="object-cover opacity-55"
               priority
             />
           </motion.div>
