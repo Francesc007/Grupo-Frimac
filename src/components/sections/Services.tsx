@@ -76,7 +76,7 @@ const services = [
     title: "Supervisión de Obra",
     description: "Control riguroso de calidad, tiempos y presupuestos mediante ingenieros expertos dedicados a su proyecto.",
     icon: <HardHat size={32} />,
-    image: "/supervision.webp"
+    image: "/supervision1.jpg"
   },
   {
     title: "Carpintería",
