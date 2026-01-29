@@ -63,7 +63,7 @@ export default function ExperienciaPage() {
             animate={{ opacity: 1, x: 0 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Nuestra Huella en la <span className="text-primary-dark">Industria Nacional</span></h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tight uppercase">Nuestra Huella en la <span className="text-primary-dark">Industria Nacional</span></h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
               Consolidamos nuestro prestigio a través de ejecuciones impecables. Desde Aguascalientes para todo México, transformamos retos de ingeniería en infraestructura de éxito.
             </p>

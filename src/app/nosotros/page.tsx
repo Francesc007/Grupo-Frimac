@@ -52,7 +52,7 @@ export default function NosotrosPage() {
           >
             <Image 
               src="/Imagen1.png" 
-              alt="Ingeniería y Construcción Industrial" 
+              alt="Ingeniería y Construcción Industrial, Comercial y Residencial" 
               fill
               className="object-cover opacity-55"
               priority
@@ -70,7 +70,7 @@ export default function NosotrosPage() {
             >
               <h1 className="text-4xl md:text-5xl font-extrabold mb-8 leading-[1.3] md:leading-[1.4] tracking-tight uppercase">
                 Ingeniería y Construcción <br className="hidden md:block" />
-                <span className="text-primary-dark">Industrial</span>
+                <span className="text-primary-dark">Industrial, Comercial y Residencial</span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-300 leading-relaxed italic border-l-0 lg:border-l-4 border-primary-dark lg:pl-8 py-2 max-w-xl mx-auto lg:mx-0">
                 "<span className="text-primary-dark font-bold">15+ años</span> transformando el futuro industrial con excelencia técnica."

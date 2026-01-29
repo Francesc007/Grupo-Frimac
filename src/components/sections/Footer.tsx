@@ -63,10 +63,10 @@ export const Footer = () => {
             Líderes en soluciones industriales y de construcción en el centro del país. Calidad, seguridad y compromiso en cada obra que realizamos.
           </p>
           <div className="flex gap-4">
-            <a href="#" aria-label="Facebook" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
+            <a href="https://www.facebook.com/profile.php?id=61566597906461" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
               <Facebook size={18} />
             </a>
-            <a href="#" aria-label="Instagram" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
+            <a href="https://www.instagram.com/grupofrimacoficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
               <Instagram size={18} />
             </a>
             <a href="#" aria-label="LinkedIn" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary-dark transition-all duration-300">
