@@ -1,9 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Trust } from "@/components/sections/Trust";
 import { Factory, Building2, Store, Construction, CheckCircle2, Users2, BarChart3, Award } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+
+const Counter = ({ value }: { value: string }) => {
+  const [displayValue, setDisplayValue] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  
+  const numericValue = parseInt(value.replace(/[^0-9]/g, ""), 10);
+  const prefix = value.startsWith("+") ? "+" : "";
+  const suffix = value.endsWith("+") ? "+" : value.endsWith("%") ? "%" : "";
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = numericValue;
+      const duration = 2000; // 2 seconds
+      const startTime = performance.now();
+
+      const animate = (currentTime: number) => {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        
+        // Easing function: easeOutExpo
+        const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        
+        const currentCount = Math.floor(easeProgress * end);
+        setDisplayValue(currentCount);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      requestAnimationFrame(animate);
+    }
+  }, [isInView, numericValue]);
+
+  return (
+    <span ref={ref}>
+      {prefix}{displayValue}{suffix}
+    </span>
+  );
+};
 
 export default function ExperienciaPage() {
   const sectors = [
@@ -50,7 +93,7 @@ export default function ExperienciaPage() {
               src="/footer.webp" 
               alt="Infraestructura Industrial" 
               fill
-              className="object-cover opacity-35"
+              className="object-cover opacity-95"
               priority
             />
           </motion.div>
@@ -79,7 +122,9 @@ export default function ExperienciaPage() {
                 className="bg-white/5 backdrop-blur-md p-5 md:p-6 rounded-[1.5rem] border border-white/10 text-center shadow-2xl"
               >
                 <div className="flex justify-center mb-3">{stat.icon}</div>
-                <div className="text-2xl md:text-3xl font-bold mb-0.5 text-white">{stat.value}</div>
+                <div className="text-2xl md:text-3xl font-bold mb-0.5 text-white">
+                  <Counter value={stat.value} />
+                </div>
                 <div className="text-[9px] text-primary-dark font-black uppercase tracking-[0.2em]">{stat.label}</div>
               </motion.div>
             ))}

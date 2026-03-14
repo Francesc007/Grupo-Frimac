@@ -54,7 +54,7 @@ export default function NosotrosPage() {
               src="/Imagen1.png" 
               alt="Ingeniería y Construcción Industrial, Comercial y Residencial" 
               fill
-              className="object-cover opacity-55"
+              className="object-cover opacity-95"
               priority
             />
           </motion.div>

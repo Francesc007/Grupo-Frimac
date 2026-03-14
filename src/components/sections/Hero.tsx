@@ -20,7 +20,7 @@ export const Hero = () => {
                    src="/Imagen49.png"
                    alt="Equipo de Trabajo Grupo Frimac"
                    fill
-                   className="object-cover opacity-35"
+                   className="object-cover opacity-95"
                    priority
                  />
                </motion.div>

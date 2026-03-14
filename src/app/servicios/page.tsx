@@ -20,7 +20,7 @@ export default function ServiciosPage() {
               src="/instalaciones.webp" 
               alt="Ingeniería y Construcción" 
               fill
-              className="object-cover opacity-40"
+              className="object-cover opacity-95"
               priority
             />
           </motion.div>
