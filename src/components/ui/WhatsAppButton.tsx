@@ -33,6 +33,12 @@ export const WhatsAppButton = ({ className, text }: WhatsAppButtonProps) => {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={(e) => {
+          if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+            e.preventDefault();
+            (window as any).gtag_report_conversion(url);
+          }
+        }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className={`bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-full text-lg flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden ${className}`}
@@ -88,6 +94,12 @@ export const WhatsAppButton = ({ className, text }: WhatsAppButtonProps) => {
           rel="noopener noreferrer"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onClick={(e) => {
+            if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+              e.preventDefault();
+              (window as any).gtag_report_conversion(url);
+            }
+          }}
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
           whileHover={{ scale: 1.15 }}
