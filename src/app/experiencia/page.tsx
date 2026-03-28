@@ -230,7 +230,7 @@ export default function ExperienciaPage() {
           <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-tighter leading-tight">¿Listo para elevar el estándar de su infraestructura?</h2>
           <p className="text-lg md:text-xl text-slate-400 mb-12 font-medium">Permítanos ser su aliado estratégico en su próximo proyecto de gran escala bajo estándares internacionales.</p>
           <a 
-            href="https://wa.me/524491115640?text=Hola%20Grupo%20Frimac%2C%20me%20interesa%20agendar%20una%20reuni%C3%B3n%20t%C3%A9cnica%20para%20un%20proyecto." 
+            href="https://wa.me/524491560150?text=Hola%20Grupo%20Frimac%2C%20me%20interesa%20agendar%20una%20reuni%C3%B3n%20t%C3%A9cnica%20para%20un%20proyecto." 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-block bg-primary-dark text-white px-10 md:px-14 py-4 md:py-5 rounded-full font-black text-base md:text-lg hover:bg-secondary transition-all shadow-2xl hover:shadow-primary-dark/40 uppercase tracking-[0.2em] text-sm w-full sm:w-auto"

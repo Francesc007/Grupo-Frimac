@@ -67,7 +67,7 @@ export default function ServiciosPage() {
             Nuestro equipo de ingeniería está listo para analizar sus planos y requerimientos con el máximo rigor profesional.
           </p>
           <a 
-            href="https://wa.me/524491115640?text=Hola,%20solicito%20una%20cotización%20técnica%20para%20un%20proyecto." 
+            href="https://wa.me/524491560150?text=Hola,%20solicito%20una%20cotización%20técnica%20para%20un%20proyecto." 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-primary-dark text-white px-10 md:px-12 py-4 md:py-5 rounded-full font-black text-base md:text-lg hover:bg-white hover:text-secondary transition-all shadow-2xl hover:shadow-primary-dark/20 uppercase tracking-widest w-full sm:w-auto"

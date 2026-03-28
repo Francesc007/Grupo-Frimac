@@ -8,7 +8,7 @@ interface WhatsAppButtonProps {
   text?: string;
 }
 
-const WHATSAPP_NUMBER = "524491115640";
+const WHATSAPP_NUMBER = "524491560150";
 const MESSAGE = "Hola Grupo Frimac, me interesa cotizar un proyecto.";
 
 // Icono de WhatsApp oficial en SVG
