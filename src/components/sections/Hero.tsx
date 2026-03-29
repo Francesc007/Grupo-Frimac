@@ -24,8 +24,8 @@ export const Hero = () => {
                    priority
                  />
                </motion.div>
-               {/* Gradiente sutil del lado izquierdo para legibilidad (Sincronizado con Experiencia) */}
-               <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent z-10" />
+               {/* Overlay uniforme y sutil para legibilidad (Sincronizado con Experiencia) */}
+               <div className="absolute inset-0 bg-secondary/75 z-10" />
                {/* Partículas visuales sutiles */}
                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 z-20" />
              </div>

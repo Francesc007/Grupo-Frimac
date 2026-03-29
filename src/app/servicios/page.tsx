@@ -24,7 +24,7 @@ export default function ServiciosPage() {
               priority
             />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent" />
+          <div className="absolute inset-0 bg-secondary/75" />
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">

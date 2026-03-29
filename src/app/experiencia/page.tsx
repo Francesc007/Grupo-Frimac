@@ -97,7 +97,7 @@ export default function ExperienciaPage() {
               priority
             />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent" />
+          <div className="absolute inset-0 bg-secondary/75" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
@@ -119,7 +119,12 @@ export default function ExperienciaPage() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 backdrop-blur-md p-5 md:p-6 rounded-[1.5rem] border border-white/10 text-center shadow-2xl"
+                whileHover={{ 
+                  scale: 1.05,
+                  borderColor: "rgba(0, 174, 239, 0.5)",
+                  boxShadow: "0 0 20px rgba(0, 174, 239, 0.3)"
+                }}
+                className="bg-white/5 backdrop-blur-md p-5 md:p-6 rounded-[1.5rem] border border-white/10 text-center shadow-2xl transition-colors duration-300 cursor-default"
               >
                 <div className="flex justify-center mb-3">{stat.icon}</div>
                 <div className="text-2xl md:text-3xl font-bold mb-0.5 text-white">
